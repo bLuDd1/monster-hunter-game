@@ -15,6 +15,8 @@
 		137FF63A2C6242A3004652A2 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 137FF6392C6242A3004652A2 /* Base */; };
 		137FF63C2C6242A5004652A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 137FF63B2C6242A5004652A2 /* Assets.xcassets */; };
 		137FF63F2C6242A5004652A2 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 137FF63E2C6242A5004652A2 /* Base */; };
+		137FF6462C624331004652A2 /* MainMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137FF6452C624331004652A2 /* MainMenuScene.swift */; };
+		137FF6482C6246A9004652A2 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137FF6472C6246A9004652A2 /* Background.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,8 @@
 		137FF6392C6242A3004652A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		137FF63B2C6242A5004652A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		137FF63E2C6242A5004652A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		137FF6452C624331004652A2 /* MainMenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuScene.swift; sourceTree = "<group>"; };
+		137FF6472C6246A9004652A2 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +63,7 @@
 		137FF62D2C6242A3004652A2 /* monster-hunter-game */ = {
 			isa = PBXGroup;
 			children = (
+				137FF6472C6246A9004652A2 /* Background.swift */,
 				137FF62E2C6242A3004652A2 /* AppDelegate.swift */,
 				137FF6302C6242A3004652A2 /* GameScene.sks */,
 				137FF6322C6242A3004652A2 /* Actions.sks */,
@@ -67,6 +72,7 @@
 				137FF6382C6242A3004652A2 /* Main.storyboard */,
 				137FF63B2C6242A5004652A2 /* Assets.xcassets */,
 				137FF63D2C6242A5004652A2 /* LaunchScreen.storyboard */,
+				137FF6452C624331004652A2 /* MainMenuScene.swift */,
 			);
 			path = "monster-hunter-game";
 			sourceTree = "<group>";
@@ -146,7 +152,9 @@
 			files = (
 				137FF6352C6242A3004652A2 /* GameScene.swift in Sources */,
 				137FF6372C6242A3004652A2 /* GameViewController.swift in Sources */,
+				137FF6462C624331004652A2 /* MainMenuScene.swift in Sources */,
 				137FF62F2C6242A3004652A2 /* AppDelegate.swift in Sources */,
+				137FF6482C6246A9004652A2 /* Background.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
