@@ -1,28 +1,45 @@
+//
+//  MapScene.swift
+//  monster-hunter-game
+//
+//  Created by Dima Tavlui on 07.08.2024.
+//
+
 import SpriteKit
 
-class MainMenuScene: SKScene {
-    
+class MapScene: SKScene {
     let background = Background()
     
     override func didMove(to view: SKView) {
-        background.createBackground(to: self, image: "background2")
+        background.createBackground(to: self, image: "background1")
         
-        createPlayButton()
+        createLevelButton()
         
-        createMainLabel()
+        createLabel()
     }
     
-    func createMainLabel() {
-        let lable = SKLabelNode(text: "Monster Hunter")
-        lable.position = CGPoint(x: frame.midX, y: frame.midY + 100)
+    func createLabel() {
+        let labelSize = CGSize(width: 400, height: 75)
+        
+        let shapeNode = SKShapeNode(rectOf: labelSize, cornerRadius: 15)
+        shapeNode.fillColor = .systemPurple
+        shapeNode.strokeColor = .black
+        shapeNode.lineWidth = 1.5
+        
+        let lable = SKLabelNode(text: "Choose the level")
+        lable.position = CGPoint(x: frame.midX, y: frame.midY + 300)
         lable.fontColor = .black
+        lable.color = .white
         lable.fontName = "Helvetica"
         lable.fontSize = 45
+        
+        shapeNode.position = CGPoint(x: 0, y: 15)
+        lable.addChild(shapeNode)
         
         self.addChild(lable)
     }
     
-    func createPlayButton() {
+    func createLevelButton() {
         let buttonSize = CGSize(width: 150, height: 75)
         
         let shapeNode = SKShapeNode(rectOf: buttonSize, cornerRadius: 15)
@@ -31,13 +48,13 @@ class MainMenuScene: SKScene {
         shapeNode.lineWidth = 2
         
         let playButton = SKSpriteNode(color: .clear, size: buttonSize)
-        playButton.name = "playButton"
-        playButton.position = CGPoint(x: frame.midX, y: frame.midY - 100)
+        playButton.name = "levelButton"
+        playButton.position = CGPoint(x: frame.midX, y: frame.midY)
 
         shapeNode.position = CGPoint(x: 0, y: 0)
         playButton.addChild(shapeNode)
         
-        let playButtonLabel = SKLabelNode(text: "Play")
+        let playButtonLabel = SKLabelNode(text: "Level 1")
         playButtonLabel.fontSize = 35
         playButtonLabel.fontName = "Helvetica"
         playButtonLabel.fontColor = SKColor.white
@@ -53,7 +70,7 @@ class MainMenuScene: SKScene {
             let touchLocation = touch.location(in: self)
             let touchedNode = self.atPoint(touchLocation)
             
-            if touchedNode.name == "playButton" || touchedNode.parent?.name == "playButton" {
+            if touchedNode.name == "levelButton" || touchedNode.parent?.name == "levelButton" {
                 touchedNode.run(SKAction.scale(to: 0.9, duration: 0.1))
             }
         }
@@ -64,12 +81,12 @@ class MainMenuScene: SKScene {
             let touchLocation = touch.location(in: self)
             let touchedNode = self.atPoint(touchLocation)
             
-            if touchedNode.name == "playButton" || touchedNode.parent?.name == "playButton" {
+            if touchedNode.name == "levelButton" || touchedNode.parent?.name == "levelButton" {
                 touchedNode.run(SKAction.scale(to: 1.0, duration: 0.1))
-                let mapScene = MapScene(size: self.size)
-                mapScene.scaleMode = self.scaleMode
+                let gameScene = GameScene(size: self.size)
+                gameScene.scaleMode = self.scaleMode
                 let transition = SKTransition.moveIn(with: .up, duration: 0.5)
-                self.view?.presentScene(mapScene, transition: transition)
+                self.view?.presentScene(gameScene, transition: transition)
             }
         }
     }
@@ -79,7 +96,7 @@ class MainMenuScene: SKScene {
             let touchLocation = touch.location(in: self)
             let touchedNode = self.atPoint(touchLocation)
             
-            if touchedNode.name == "playButton" || touchedNode.parent?.name == "playButton" {
+            if touchedNode.name == "levelButton" || touchedNode.parent?.name == "levelButton" {
                 touchedNode.run(SKAction.scale(to: 1.0, duration: 0.1))
             }
         }

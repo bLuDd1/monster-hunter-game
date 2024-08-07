@@ -17,6 +17,7 @@
 		137FF63F2C6242A5004652A2 /* Base in Resources */ = {isa = PBXBuildFile; fileRef = 137FF63E2C6242A5004652A2 /* Base */; };
 		137FF6462C624331004652A2 /* MainMenuScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137FF6452C624331004652A2 /* MainMenuScene.swift */; };
 		137FF6482C6246A9004652A2 /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137FF6472C6246A9004652A2 /* Background.swift */; };
+		137FF64A2C63A98E004652A2 /* MapScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 137FF6492C63A98E004652A2 /* MapScene.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		137FF63E2C6242A5004652A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		137FF6452C624331004652A2 /* MainMenuScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainMenuScene.swift; sourceTree = "<group>"; };
 		137FF6472C6246A9004652A2 /* Background.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
+		137FF6492C63A98E004652A2 /* MapScene.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScene.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				137FF63B2C6242A5004652A2 /* Assets.xcassets */,
 				137FF63D2C6242A5004652A2 /* LaunchScreen.storyboard */,
 				137FF6452C624331004652A2 /* MainMenuScene.swift */,
+				137FF6492C63A98E004652A2 /* MapScene.swift */,
 			);
 			path = "monster-hunter-game";
 			sourceTree = "<group>";
@@ -153,6 +156,7 @@
 				137FF6352C6242A3004652A2 /* GameScene.swift in Sources */,
 				137FF6372C6242A3004652A2 /* GameViewController.swift in Sources */,
 				137FF6462C624331004652A2 /* MainMenuScene.swift in Sources */,
+				137FF64A2C63A98E004652A2 /* MapScene.swift in Sources */,
 				137FF62F2C6242A3004652A2 /* AppDelegate.swift in Sources */,
 				137FF6482C6246A9004652A2 /* Background.swift in Sources */,
 			);
