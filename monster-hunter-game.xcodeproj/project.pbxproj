@@ -70,11 +70,11 @@
 				137FF6302C6242A3004652A2 /* GameScene.sks */,
 				137FF6322C6242A3004652A2 /* Actions.sks */,
 				137FF6342C6242A3004652A2 /* GameScene.swift */,
+				137FF6452C624331004652A2 /* MainMenuScene.swift */,
 				137FF6362C6242A3004652A2 /* GameViewController.swift */,
 				137FF6382C6242A3004652A2 /* Main.storyboard */,
 				137FF63B2C6242A5004652A2 /* Assets.xcassets */,
 				137FF63D2C6242A5004652A2 /* LaunchScreen.storyboard */,
-				137FF6452C624331004652A2 /* MainMenuScene.swift */,
 				137FF6492C63A98E004652A2 /* MapScene.swift */,
 			);
 			path = "monster-hunter-game";

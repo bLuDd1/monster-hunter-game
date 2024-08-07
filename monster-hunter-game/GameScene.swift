@@ -10,11 +10,10 @@ import GameplayKit
 
 class GameScene: SKScene {
     
-    private var label : SKLabelNode?
-    private var spinnyNode : SKShapeNode?
+    let background = Background()
     
     override func didMove(to view: SKView) {
-        
+        background.createBackgoundGame(to: self)
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
