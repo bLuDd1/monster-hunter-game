@@ -17,7 +17,7 @@ class Background {
     }
     
     func createBackgoundGame(to scene: SKScene) {
-        let bgTexture = SKTexture(imageNamed: "background3")
+        let bgTexture = SKTexture(imageNamed: "gamebg")
         let moveBg = SKAction.moveBy(x: -bgTexture.size().width, y: 0, duration: 10)
         let replaceBg = SKAction.moveBy(x: bgTexture.size().width, y: 0, duration: 0)
         let moveBgForever = SKAction.repeatForever(SKAction.sequence([moveBg, replaceBg]))
