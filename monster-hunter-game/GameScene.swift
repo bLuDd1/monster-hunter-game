@@ -14,6 +14,7 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
     
     // Textures
     var playerTexture: SKTexture!
+    var playerFallTexture: SKTexture!
     var monsterTextures: [SKTexture]!
     var slimeTexture: SKTexture!
     
@@ -50,12 +51,14 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         scoreLabel = SKLabelNode(text: "Score: 0")
         scoreLabel.fontSize = 24
         scoreLabel.fontColor = SKColor.black
+        scoreLabel.fontName = "Helvetica"
         scoreLabel.position = CGPoint(x: 100, y: self.frame.height - 40)
         self.addChild(scoreLabel)
         
         livesLabel = SKLabelNode(text: "Lives: 3")
         livesLabel.fontSize = 24
         livesLabel.fontColor = SKColor.black
+        livesLabel.fontName = "Helvetica"
         livesLabel.position = CGPoint(x: self.frame.width - 100, y: self.frame.height - 40)
         self.addChild(livesLabel)
         
@@ -115,14 +118,18 @@ class GameScene: SKScene, SKPhysicsContactDelegate {
         
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         if let touch = touches.first {
-            let touchLocation = touch.location(in: self)
+            touch.location(in: self)
             player.physicsBody?.velocity = CGVector(dx: 0, dy: 400)
             isTouching = true
+            player.texture = playerTexture
         }
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         isTouching = false
+        playerFallTexture = SKTexture(imageNamed: "playerFall")
+        player.texture = playerFallTexture
+        
     }
     
     override func update(_ currentTime: TimeInterval) {
